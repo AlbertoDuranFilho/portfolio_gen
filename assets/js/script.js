@@ -221,9 +221,7 @@ function iniciarSwiper() {
   });
 }
 
-// ============================================
 // VALIDAÇÃO DE FORMULÁRIO
-// ============================================
 formulario.addEventListener("submit", function (event) {
   event.preventDefault();
 
