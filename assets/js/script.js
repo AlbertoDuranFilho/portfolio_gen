@@ -1,7 +1,3 @@
-// ============================================
-// SELEÇÃO DE ELEMENTOS DA PÁGINA
-// ============================================
-
 // Seletor da Seção About (section)
 const about = document.querySelector("#about");
 
@@ -14,12 +10,9 @@ const formulario = document.querySelector("#formulario");
 // Regex de validação do e-mail
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
-// ============================================
-// BUSCAR DADOS DO PERFIL DO GITHUB
-// ============================================
+// Buscar dados do perfil do GitHub
 async function getAboutGithub() {
   try {
-    // Não esqueça de trocar conteudoGeneration pelo seu usuário do GitHub
     const resposta = await fetch(
       "https://api.github.com/users/albertoduranfilho",
     );
@@ -76,12 +69,9 @@ async function getAboutGithub() {
 // Executar a função ao carregar o script
 getAboutGithub();
 
-// ============================================
-// BUSCAR REPOSITÓRIOS DO GITHUB
-// ============================================
+// Buscar repositório do Github
 async function getProjectsGithub() {
   try {
-    // Não esqueça de trocar conteudoGeneration pelo seu usuário do GitHub
     const resposta = await fetch(
       "https://api.github.com/users/albertoduranfilho/repos?sort=update&per_page=6",
     );
@@ -177,9 +167,7 @@ async function getProjectsGithub() {
 // Executar a função ao carregar o script
 getProjectsGithub();
 
-// ============================================
-// CARROSSEL - SWIPER
-// ============================================
+// Swiper
 function iniciarSwiper() {
   new Swiper(".projects-swiper", {
     slidesPerView: 1,
